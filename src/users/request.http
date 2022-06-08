@@ -1,0 +1,45 @@
+### Create a new user
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+  "email": "asdf7@asdf.com",
+  "password": "asdlfkajsd"
+}
+
+### Sign In
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "asdf7@asdf.com",
+  "password": "asdlfkajsd"
+}
+
+### Get current user
+GET http://localhost:3000/auth/currentUser
+content-type: application/json
+
+### SıgnOut
+POST http://localhost:3000/auth/signout
+
+### Find a particular user with a given ID
+GET http://localhost:3000/auth/2
+
+### Find all users with a given email
+GET http://localhost:3000/auth?email=asdf@asdf.comi
+
+### Delete a user given id
+DELETE http://localhost:3000/auth/4
+
+### Update a user
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+  "password": "aaaaa"
+}
+
+
+### Current user
+GET http://localhost:3000/auth/whoami
